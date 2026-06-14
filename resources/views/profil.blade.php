@@ -1,94 +1,123 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Profil Kelompok</title>
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background:#f4f4f4;
-            padding:30px;
-        }
+<title>Profil Kelompok</title>
 
-        .card{
-            background:white;
-            max-width:800px;
-            margin:auto;
-            padding:25px;
-            border-radius:15px;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
 
-        h1{
-            color:#2e7d32;
-        }
+body{
+    background:#081b4b;
+    color:white;
+}
 
-        table{
-            width:100%;
-            border-collapse:collapse;
-            margin-top:20px;
-        }
+.header{
+    padding:30px;
+    font-size:40px;
+    font-weight:bold;
+}
 
-        th,td{
-            border:1px solid #ddd;
-            padding:10px;
-            text-align:left;
-        }
+.bento-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    padding:20px;
+}
 
-        th{
-            background:#2e7d32;
-            color:white;
-        }
+.card{
+    background:#0f2b7a;
+    border-radius:25px;
+    padding:25px;
+    transition:.3s;
+}
 
-        .btn{
-            display:inline-block;
-            margin-top:20px;
-            padding:10px 20px;
-            background:#2e7d32;
-            color:white;
-            text-decoration:none;
-            border-radius:8px;
-        }
-    </style>
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.hero{
+    background:linear-gradient(135deg,#00a8ff,#6dd5fa);
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.member{
+    min-height:180px;
+}
+
+.member h2{
+    margin-bottom:10px;
+}
+
+.member p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.icon{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#00a8ff;
+    color:white;
+    padding:12px 25px;
+    border-radius:12px;
+    text-decoration:none;
+}
+</style>
+
 </head>
 <body>
 
-<div class="card">
+<div class="header">
+👥 Profil Kelompok 4
+</div>
 
-<h1>🌲 Profil Kelompok 4</h1>
+<div class="bento-grid">
 
-<p>Proyek: Survival Guide Laravel</p>
+    <div class="card hero">
+        <h1>Survival Guide Laravel</h1>
+        <p>
+            Website edukasi bertahan hidup di hutan menggunakan Laravel dan Bento Grid Design.
+        </p>
 
-<table>
-    <tr>
-        <th>No</th>
-        <th>Nama</th>
-        <th>NIM</th>
-        <th>Tugas</th>
-    </tr>
+        <a href="/dashboard" class="btn">
+            Kembali ke Dashboard
+        </a>
+    </div>
 
-    <tr>
-        <td>1</td>
-        <td>alvan rashad pratama kurnia</td>
-        <td>F1A250016</td>
-        <td>login</td>
-    </tr>
+    <div class="card member">
+        <div class="icon">👨‍💻</div>
+        <h2>Alvan Rashad Pratama Kurnia</h2>
+        <p>NIM : F1A250016</p>
+        <p>Tugas : Login</p>
+    </div>
 
-    <tr>
-        <td>2</td>
-        <td>risa aulia septiani</td>
-        <td>F1A250014</td>
-        <td>isi</td>
-    </tr>
+    <div class="card member">
+        <div class="icon">👩‍💻</div>
+        <h2>Risa Aulia Septiani</h2>
+        <p>NIM : F1A250014</p>
+        <p>Tugas : Isi</p>
+    </div>
 
-    <tr>
-        <td>3</td>
-        <td>jaissy fauzan purnama</td>
-        <td>F1A250011</td>
-        <td>contact persone</td>
-    </tr>
-</table>
-
-<a href="/dashboard" class="btn">⬅️ Kembali ke Dashboard</a>
+    <div class="card member">
+        <div class="icon">👨‍💻</div>
+        <h2>Jaissy Fauzan Purnama</h2>
+        <p>NIM : F1A250011</p>
+        <p>Tugas : Contact Person</p>
+    </div>
 
 </div>
 

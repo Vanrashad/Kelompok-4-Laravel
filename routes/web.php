@@ -29,3 +29,15 @@ Route::get('/shelter', function () {
 Route::get('/peralatan', function () {
     return view('peralatan');
 });
+
+Route::get('air', function () {
+    return view('air');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
