@@ -20,3 +20,27 @@ Route::middleware('auth')->group(function(){
     Route::get('/dashboard', function(){ return view('dashboard'); });
     Route::resource('products', ProductController::class);
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
+Route::get('/materi', function () {
+    return view('materi');
+});
+
+Route::get('/profil', function () {
+    return view('profil');
+});
+
+Route::get('/api', function () {
+    return view('api');
+});
+
+Route::get('/shelter', function () {
+    return view('shelter');
+});
+
+Route::get('/peralatan', function () {
+    return view('peralatan');
+});
