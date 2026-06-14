@@ -14,7 +14,7 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    // Fungsi login bawaan dari file Anda
+    
     public function login(Request $request)
     {
         if (Auth::attempt([
@@ -28,7 +28,6 @@ class AuthController extends Controller
         return back()->with('error', 'Login gagal');
     }
 
-    // Fungsi registerForm & register
     public function registerForm()
     {
         return view('auth.register');
