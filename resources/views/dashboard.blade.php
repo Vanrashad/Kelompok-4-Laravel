@@ -105,39 +105,37 @@ font-weight:bold;
 
 <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
 
-<a href="/materi" class="btn">
-Lihat Materi
+<a href="/materi" style="text-decoration:none;color:black;">
+    <div class="card">
+        <h2>💧 Mencari Air</h2>
+        <p>Menemukan sumber air bersih.</p>
+    </div>
 </a>
-</div>
 
-<div class="card">
-<h2>💧 Mencari Air</h2>
-<p>Menemukan sumber air bersih.</p>
-</div>
+<a href="/api" style="text-decoration:none;color:black;">
+    <div class="card">
+        <h2>🔥 Membuat Api</h2>
+        <p>Teknik membuat api darurat.</p>
+    </div>
+</a>
 
-<div class="card">
-<h2>🔥 Membuat Api</h2>
-<p>Teknik membuat api darurat.</p>
-</div>
+<a href="/shelter" style="text-decoration:none;color:black;">
+    <div class="card">
+        <h2>🏕️ Shelter</h2>
+        <p>Membangun tempat berlindung sederhana.</p>
+    </div>
+</a>
 
-<div class="card big">
-<h2>🏕️ Shelter</h2>
-<p>Membangun tempat berlindung sederhana.</p>
-</div>
+<a href="/profil" style="text-decoration:none;color:black;">
+    <div class="card">
+        <h2>👥 Profil Kelompok</h2>
+        <p>Data anggota kelompok.</p>
+    </div>
+</a>
 
-<div class="card">
-<h2>🧭 Navigasi</h2>
-<p>Menggunakan kompas dan alam.</p>
-</div>
-
-<div class="card">
-<h2>🎒 Peralatan</h2>
-<p>Daftar perlengkapan survival.</p>
-</div>
-
-</div>
-
-</div>
-
-</body>
-</html>
+<a href="/peralatan" style="text-decoration:none; color:black;">
+    <div class="card">
+        <h2>🎒 Peralatan</h2>
+        <p>Daftar perlengkapan survival.</p>
+    </div>
+</a>
