@@ -1,21 +1,3 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout>
-=======
 <!DOCTYPE html>
 <html>
 <head>
@@ -108,6 +90,24 @@
         font-size:35px;
     }
 
+    .btn-detail {
+        display: block;
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #ffffff;
+        color: #3d73dd;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 14px;
+        transition: background-color 0.2s;
+    }
+
+    .btn-detail:hover {
+        background-color: #f1f5f9;
+    }
+
     @media(max-width:768px){
         .bento-grid{
             grid-template-columns:1fr;
@@ -165,6 +165,24 @@
         <p>Teknik membuat api darurat.</p>
     </a>
 
+    <a href="{{ route('guides.create') }}" class="card small">
+            <div class="icon">➕</div>
+            <h2>Tambah Materi</h2>
+            <p>Tulis panduan survival baru ke dalam sistem.</p>
+            @if(isset($guides))
+    @foreach($guides ?? [] as $guide)
+    <div class="card small">
+        <div class="icon">📘</div>
+        <h2>{{ $guide->judul }}</h2>
+        <p>{{ \Illuminate\Support\Str::limit($guide->konten, 50) }}</p>
+        <a href="{{ route('guides.show', $guide->id) }}" class="btn-detail">Lihat Materi</a>
+    </div>
+@endforeach
+@else
+    <p>Data belum dimuat.</p>
+@endif
+        </a>
+              
     <a href="/shelter" class="card small">
         <div class="icon">🏕️</div>
         <h2>Shelter</h2>
@@ -183,17 +201,10 @@
         <p>Data anggota kelompok.</p>
     </a>
 
-<<<<<<< HEAD
-<a href="/peralatan" style="text-decoration:none; color:black;">
-    <div class="card">
-        <h2>🎒 Peralatan</h2>
-        <p>Daftar perlengkapan survival.</p>
-    </div>
-</a>
->>>>>>> 27a555493bdc446d9e8e6767281aaf8917600bf1
-=======
+    <a href="{{ route('guides.create') }}" class="btn-detail">
+        + Tambah Materi Survival
+    </a>
 </div>
 
 </body>
 </html>
->>>>>>> 62da72ee0c6a29ac7cc74e6015e6ee8b065bcbdd
