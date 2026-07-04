@@ -1,83 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Materi Survival</title>
+<title>Materi Survival Hutan</title>
 
 <style>
-
 body{
-font-family:Arial;
-background:#f4f8f4;
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#eef5ee;
 }
 
 .navbar{
-background:#1b5e20;
-color:white;
-padding:20px;
+    background:#1b1b1b;
+    color:white;
+    padding:20px;
 }
 
 .container{
-max-width:1000px;
-margin:auto;
-padding:30px;
+    padding:20px;
+}
+
+.bento{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
 .card{
-background:white;
-padding:25px;
-margin-bottom:20px;
-border-radius:15px;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
 }
 
-img{
-width:100%;
-border-radius:15px;
-margin-top:10px;
+.hero{
+    grid-column:span 2;
+    background:linear-gradient(135deg,#2e7d32,#66bb6a);
+    color:white;
+}
+
+.hero img{
+    width:100%;
+    border-radius:15px;
+    margin-top:15px;
 }
 
 a{
-text-decoration:none;
-background:#2e7d32;
-color:white;
-padding:10px 15px;
-border-radius:10px;
+    text-decoration:none;
 }
-
 </style>
-</head>
 
+</head>
 <body>
 
-<div class="navbar">
-<h2>📚 Materi Survival Hutan</h2>
+<div class="header">
+    📚 Materi Survival Hutan
 </div>
 
-<div class="container">
+<div class="bento-grid">
 
-<div class="card">
-<h2>💧 Mencari Air</h2>
-<p>Cari sungai, embun pagi, dan air hujan.</p>
+    <div class="card hero">
+        <h1>Panduan Survival</h1>
+        <p>Dasar bertahan hidup di alam liar.</p>
+
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b">
+    </div>
+
+    <div class="card small">
+        <h2>💧 Air</h2>
+        <p>Cari sungai dan embun pagi.</p>
+    </div>
+
+    <div class="card small">
+        <h2>🔥 Api</h2>
+        <p>Gunakan korek atau gesekan kayu.</p>
+    </div>
+
+    <div class="card small">
+        <h2>🏕️ Shelter</h2>
+        <p>Bangun tempat aman.</p>
+    </div>
+
+    <div class="card small">
+        <h2>🎒 Peralatan</h2>
+        <p>Siapkan alat survival.</p>
+    </div>
+
 </div>
-
-<div class="card">
-<h2>🔥 Membuat Api</h2>
-<p>Gunakan korek api atau gesekan kayu.</p>
-</div>
-
-<div class="card">
-<h2>🏕️ Membangun Shelter</h2>
-<p>Gunakan ranting dan daun sebagai pelindung.</p>
-</div>
-
-<div class="card">
-<h2>🧭 Navigasi Alam</h2>
-<p>Gunakan kompas, matahari, dan bintang.</p>
-</div>
-
-<a href="/dashboard">← Kembali ke Dashboard</a>
-
-</div>
-
-</body>
-</html>

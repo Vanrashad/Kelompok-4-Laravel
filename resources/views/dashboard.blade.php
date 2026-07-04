@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -20,138 +19,171 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dashboard Survival Guide</title>
+    <title>Survival Guide</title>
 
-<style>
+    <style>
+    body{
+        margin:0;
+        font-family:'Segoe UI',sans-serif;
+        background:#081b4b;
+        color:white;
+    }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
-}
+    .header{
+        padding:30px;
+        font-size:40px;
+        font-weight:bold;
+    }
 
-body{
-background:#eef5ee;
-}
+    .bento-grid{
+        display:grid;
+        grid-template-columns:2fr 1fr 1fr 1fr;
+        gap:20px;
+        padding:20px;
+    }
 
-.navbar{
-background:#1b5e20;
-color:white;
-padding:20px;
-display:flex;
-justify-content:space-between;
-}
+    .login-card,
+    .contact-card{
+        height: 180px;
+    }
 
-.menu a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-}
+    .login-card {
+        grid-column: 3;
+        grid-row: 1;
+        height: 150px;
+    }
 
-.container{
-padding:25px;
-}
+    .contact-card {
+        grid-column: 3;
+        grid-row: 2;
+        height: 150px;
+    }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px;
-}
+    .card{
+        background:#0f2b7a;
+        border-radius:25px;
+        padding:25px;
+        color:white;
+        text-decoration:none;
+        transition:.3s;
+        overflow:hidden;
+        box-shadow:0 10px 25px rgba(0,0,0,.2);
+    }
 
-.card{
-background:white;
-padding:20px;
-border-radius:20px;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
+    .card:hover{
+        transform:translateY(-5px);
+    }
 
-.hero{
-grid-column:span 2;
-grid-row:span 2;
-background:linear-gradient(135deg,#2e7d32,#66bb6a);
-color:white;
-}
+    .hero{
+        grid-column:span 2;
+        grid-row:span 2;
+        background:linear-gradient(135deg,#00a8ff,#6dd5fa);
+    }
 
-.hero img{
-width:100%;
-border-radius:15px;
-margin-top:10px;
-}
+    .hero h1{
+        font-size:42px;
+        margin-bottom:10px;
+    }
 
-.big{
-grid-column:span 2;
-}
+    .hero p{
+        font-size:18px;
+    }
 
-.card:hover{
-transform:translateY(-5px);
-transition:.3s;
-}
+    .hero img{
+        width:100%;
+        margin-top:20px;
+        border-radius:20px;
+    }
 
-.btn{
-display:inline-block;
-margin-top:10px;
-padding:10px 15px;
-background:white;
-color:#1b5e20;
-text-decoration:none;
-border-radius:10px;
-font-weight:bold;
-}
+    .small{
+        min-height:180px;
+    }
 
-</style>
+    .small h2{
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+
+    .icon{
+        font-size:35px;
+    }
+
+    @media(max-width:768px){
+        .bento-grid{
+            grid-template-columns:1fr;
+        }
+
+        .hero{
+            grid-column:span 1;
+            grid-row:span 1;
+        }
+    }
+    </style>
+
 </head>
-
 <body>
 
-<div class="navbar">
-<h2>🌲 Survival Guide</h2>
-
-<div class="menu">
-<a href="/dashboard">Dashboard</a>
-<a href="/materi">Materi</a>
-<a href="/">Logout</a>
-</div>
+<div class="header">
+    🌲 Survival Guide
 </div>
 
-<div class="container">
+<div class="bento-grid">
 
-<div class="grid">
+    <a href="/materi" class="card hero">
+        <span>PLATFORM V1.0</span>
 
-<div class="card hero">
-<h2>🌳 Materi Survival Hutan</h2>
-<p>Pelajari teknik bertahan hidup di alam liar.</p>
+        <h1>Materi Survival Hutan</h1>
 
-<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+        <p>
+            Pelajari teknik bertahan hidup di alam liar,
+            mulai dari mencari air, membuat api,
+            membangun shelter dan menggunakan peralatan.
+        </p>
 
-<a href="/materi" style="text-decoration:none;color:black;">
-    <div class="card">
-        <h2>💧 Mencari Air</h2>
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b">
+    </a>
+
+    <a href="/login" class="card login-card">
+        <h2>Login</h2>
+        <p>Masuk ke sistem.</p>
+    </a>
+
+    <a href="/contact" class="card contact-card">
+        <h2>Contact Persone</h2>
+        <p>Hubungi anggota kelompok.</p>
+    </a>
+
+    <a href="/air" class="card small">
+        <div class="icon">💧</div>
+        <h2>Mencari Air</h2>
         <p>Menemukan sumber air bersih.</p>
-    </div>
-</a>
+    </a>
 
-<a href="/api" style="text-decoration:none;color:black;">
-    <div class="card">
-        <h2>🔥 Membuat Api</h2>
+    <a href="/api" class="card small">
+        <div class="icon">🔥</div>
+        <h2>Membuat Api</h2>
         <p>Teknik membuat api darurat.</p>
-    </div>
-</a>
+    </a>
 
-<a href="/shelter" style="text-decoration:none;color:black;">
-    <div class="card">
-        <h2>🏕️ Shelter</h2>
-        <p>Membangun tempat berlindung sederhana.</p>
-    </div>
-</a>
+    <a href="/shelter" class="card small">
+        <div class="icon">🏕️</div>
+        <h2>Shelter</h2>
+        <p>Membangun tempat berlindung.</p>
+    </a>
 
-<a href="/profil" style="text-decoration:none;color:black;">
-    <div class="card">
-        <h2>👥 Profil Kelompok</h2>
+    <a href="/peralatan" class="card small">
+        <div class="icon">🧰</div>
+        <h2>Peralatan</h2>
+        <p>Daftar alat survival penting.</p>
+    </a>
+
+    <a href="/profil" class="card small">
+        <div class="icon">👥</div>
+        <h2>Profil Kelompok</h2>
         <p>Data anggota kelompok.</p>
-    </div>
-</a>
+    </a>
 
+<<<<<<< HEAD
 <a href="/peralatan" style="text-decoration:none; color:black;">
     <div class="card">
         <h2>🎒 Peralatan</h2>
@@ -159,3 +191,9 @@ font-weight:bold;
     </div>
 </a>
 >>>>>>> 27a555493bdc446d9e8e6767281aaf8917600bf1
+=======
+</div>
+
+</body>
+</html>
+>>>>>>> 62da72ee0c6a29ac7cc74e6015e6ee8b065bcbdd
