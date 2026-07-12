@@ -1,0 +1,14 @@
+info:
+  name: Get Products By ID
+  type: http
+  seq: 4
+
+http:
+  method: get
+  url: 127.0.01:8000/api/products/2
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
